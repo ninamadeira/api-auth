@@ -1,6 +1,6 @@
 package br.com.madeira.api.config;
 
-import br.com.madeira.api.entity.User;
+import br.com.madeira.api.domain.User;
 import br.com.madeira.api.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
