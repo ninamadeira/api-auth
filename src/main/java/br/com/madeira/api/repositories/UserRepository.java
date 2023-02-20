@@ -1,6 +1,6 @@
 package br.com.madeira.api.repositories;
 
-import br.com.madeira.api.entity.User;
+import br.com.madeira.api.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
