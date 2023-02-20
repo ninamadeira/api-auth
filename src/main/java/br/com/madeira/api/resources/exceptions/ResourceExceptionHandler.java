@@ -1,7 +1,7 @@
 package br.com.madeira.api.resources.exceptions;
 
-import br.com.dicasdeumdev.api.services.exceptions.DataIntegratyViolationException;
-import br.com.dicasdeumdev.api.services.exceptions.ObjectNotFoundException;
+import br.com.madeira.api.services.exceptions.DataIntegratyViolationException;
+import br.com.madeira.api.services.exceptions.ObjectNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 
 @ControllerAdvice
-public class ResourceEcxeptionHandler {
+public class ResourceExceptionHandler {
 
     @ExceptionHandler(ObjectNotFoundException.class)
     public ResponseEntity<StandardError>objectNotFound(ObjectNotFoundException ex, HttpServletRequest request) {
