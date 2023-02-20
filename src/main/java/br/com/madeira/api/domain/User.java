@@ -1,4 +1,4 @@
-package br.com.madeira.api.entity;
+package br.com.madeira.api.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
