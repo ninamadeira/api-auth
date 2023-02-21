@@ -1,5 +1,6 @@
 package br.com.madeira.api.resources;
 
+import br.com.madeira.api.domain.User;
 import br.com.madeira.api.domain.dto.UserDTO;
 import br.com.madeira.api.services.UserService;
 import org.modelmapper.ModelMapper;
@@ -44,9 +45,10 @@ public class UserResource {
 
     @PostMapping
     public ResponseEntity<UserDTO> create(@RequestBody UserDTO obj) {
+        User user = service.create(obj);
         URI uri = ServletUriComponentsBuilder
-                .fromCurrentRequest().path(ID).buildAndExpand(service.create(obj).getId()).toUri();
-        return ResponseEntity.created(uri).build();
+                .fromCurrentRequest().path(ID).buildAndExpand(user.getId()).toUri();
+        return ResponseEntity.created(uri).body(mapper.map(user,UserDTO.class));
     }
 
     @PutMapping(value = ID)
