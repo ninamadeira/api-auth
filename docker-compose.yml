@@ -1,16 +1,17 @@
-version: "3.7"
+version: '3.8'
 services:
-  database:
-    image: postgres
+  db:
+    image: mysql
     environment:
-      - "POSTGRES_DB=cadastro"
-      - "POSTGRES_PASSWORD=1234"
-      - "POSTGRES_USER=piaf"
+      - MYSQL_DATABASE=user_db
+      - MYSQL_ROOT_PASSWORD=root
     ports:
-      - 5441:5432
+      - '3308:3306'
     volumes:
-      - pg-data:/data/postgres
+      - db:/var/lib/mysql
 volumes:
-  pg-data:
+  db:
     driver: local
+
+
  
